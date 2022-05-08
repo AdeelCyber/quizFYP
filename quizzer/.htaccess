@@ -1,0 +1,11 @@
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+
+RewriteRule ^(.*)$ $1.html [NC,L]
+Header set Expires "Thu, 19 Nov 1981 08:52:00 GM"
+Header set Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+Header set Pragma "no-cache"
